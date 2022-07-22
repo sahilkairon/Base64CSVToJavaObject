@@ -19,7 +19,7 @@ public class converter {
 //            r.forEach(x -> System.out.println(Arrays.toString(x)));
 //        }
 
-        List<user> beans = new CsvToBeanBuilder(new InputStreamReader(stream))
+        List<user> beans = new CsvToBeanBuilder<user>(new InputStreamReader(stream))
                 .withType(user.class)
                 .build()
                 .parse();
